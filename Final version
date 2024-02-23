@@ -1,0 +1,83 @@
+print("hello")
+numbers = [1,2,3,4,5,6,7,8]
+evens = []
+odds = []
+
+for x in numbers:
+    if x % 2 == 0:
+        evens.append(x)
+
+for x in numbers:
+    if x % 2 == 1:
+        odds.append(x)
+
+print(evens)
+print(odds)
+
+#sum = 0
+# for i in numbers:
+#     sum += i 
+# print(sum)
+
+avg = 0
+#avg = sum/len(numbers)
+print(avg)
+
+m = max(numbers)
+print(m)
+
+n = min(numbers)
+print(n)
+
+i = 9
+if i in numbers:
+    print("exists")
+else:
+    print("dosen't exist")
+
+vowel = set("aeiouAEIOU")
+consanent = set("bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTUVWXYZ")
+count = 0
+conscount = 0
+word = "charlotte"
+
+for x in word:
+    if x in vowel:
+        count = count + 1
+    elif x.isalpha():
+        conscount = conscount +1
+print("number of vowels in", word, ":", count)
+print("number of constanent in", word, ":", conscount)
+
+
+
+def isPalindrome(s):
+    return s == s[::-1]
+
+s = "hello"
+ans = isPalindrome(s)
+
+if ans:
+    print(s, "is a palidrome")
+else:
+    print(s, "is not a palidrome")
+
+students = [ {"name": "Alice", "grades": [85, 90, 78]}, {"name": "Bob", "grades": [95, 82, 98]}, {"name": "Charlie", "grades": [70, 85, 92]}]
+
+
+
+for student in students:
+    avg = sum(student["grades"])/len(student["grades"])
+    print((student["name"]),":",avg)
+
+
+movies = [ {"title": "The Shawshank Redemption", "genre": "Drama", "rating": 9.3}, {"title": "The Godfather", "genre": "Crime", "rating": 9.2}, {"title": "The Dark Knight", "genre": "Action", "rating": 9.0}, {"title": "Pulp Fiction", "genre": "Crime", "rating": 8.9}, {"title": "Schindler's List", "genre": "Drama", "rating": 8.9} ]
+
+rating = 0
+for movie in movies:
+    if movie.get("rating") > rating:
+        rating = movie.get("rating")
+        title = movie["title"]
+        genre = movie["genre"]
+
+    print("movie name:"+ str(title)+ "genre: "+ str(genre) + "rating" + str(rating))
